@@ -1,0 +1,16 @@
+:root {
+  --main-color: #00b6c4;
+  --tt-moons-font: "ttmoons-font", sans-serif;
+}
+
+@font-face {
+  font-family: "ttmoons-font";
+  src: url("./fonts/TT-Moons-font/TT-Moons-Bold.otf") format("opentype");
+}
+
+body {
+  font-size: 2rem;
+  font-family: var(--tt-moons-font);
+  color: var(--main-color);
+  letter-spacing: 1px;
+}
