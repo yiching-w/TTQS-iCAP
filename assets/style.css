@@ -1,6 +1,12 @@
 :root {
-  --main-color: #00b6c4;
+  --main-color: #49999f;
+  --font-color: #43302a;
+  --font-color2: #00b6c4;
+  --light-color: #f5feff;
+  --gray: #e5e6e7;
   --tt-moons-font: "ttmoons-font", sans-serif;
+  --NotoSansTC-Bold: "NotoSansTC-Bold", sans-serif;
+  --NotoSansTC-Regular: "NotoSansTC-Regular", sans-serif;
 }
 
 @font-face {
@@ -8,9 +14,589 @@
   src: url("./fonts/TT-Moons-font/TT-Moons-Bold.otf") format("opentype");
 }
 
+@font-face {
+  font-family: "NotoSansTC-Bold";
+  src: url("./fonts/NotoSansTC/NotoSansTC-Bold.ttf") format("opentype");
+}
+
+@font-face {
+  font-family: "NotoSansTC-Regular";
+  src: url("./fonts/NotoSansTC/NotoSansTC-Regular.ttf") format("opentype");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  font-size: 2rem;
+  font-family: var(--NotoSansTC-Regular);
+}
+
+a {
+  text-decoration: none;
+  color: var(--font-color);
+}
+
+section#Banner {
+  padding: 70px 170px;
+  background-color: var(--light-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+section#Banner .title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+section#Banner .title .zh {
+  font-size: 75px;
+  color: var(--font-color);
+  font-family: var(--NotoSansTC-Bold);
+  text-shadow: 1px 1px 1px #0005;
+}
+
+section#Banner .title .en {
+  font-size: 65px;
   font-family: var(--tt-moons-font);
-  color: var(--main-color);
-  letter-spacing: 1px;
+  color: var(--font-color2);
+  letter-spacing: 1.5px;
+}
+
+section#Banner .image {
+  width: 220px;
+  height: 220px;
+}
+
+section#Banner .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+section.main,
+footer {
+  padding: 50px 170px;
+}
+
+.title-search {
+  display: flex;
+  align-items: center;
+  background-color: var(--gray);
+  border-radius: 10px;
+  width: 280px;
+  height: 43px;
+  cursor: pointer;
+}
+
+.title-search .left {
+  background-color: var(--main-color);
+  border-radius: 10px 0 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 100%;
+}
+
+.title-search .left img {
+  width: 60%;
+  object-fit: contain;
+}
+
+.title-search .right {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.title-search .right .text {
+  margin-left: 20px;
+  font-size: 30px;
+  font-family: var(--tt-moons-font);
+}
+
+.title-search .right .dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title-search .right .dots img {
+  width: 30px;
+}
+
+.divider {
+  width: 100%;
+  height: 0.8px;
+  background-color: var(--font-color);
+  margin: 20px 0;
+}
+
+section#iCAP {
+  background-color: var(--light-color);
+}
+
+section.main .content {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  gap: 25px;
+}
+
+section.main .content > * {
+  align-self: center;
+}
+
+section.main .content .image {
+  width: 100%;
+}
+
+section.main .content .image img {
+  width: 100%;
+  object-fit: cover;
+}
+
+section.main .content .detail .title .zh {
+  font-size: 50px;
+  color: var(--font-color);
+  font-family: var(--NotoSansTC-Regular);
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+section.main .content .detail .title .en a {
+  font-size: 35px;
+  color: var(--font-color2) !important;
+  font-family: var(--tt-moons-font);
+}
+
+section.main .content .detail .links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+section.main .content .detail .links .link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+section.main .content .detail .links .link > div:first-child {
+  width: 100px;
+  height: 100px;
+}
+
+section.main .content .detail .links .link > div:first-child img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+section.main .content .detail .links .link > div.text > a {
+  display: block;
+  background-color: var(--main-color);
+  margin-top: 10px;
+  padding: 10px 15px;
+  color: #fff;
+  font-family: var(--NotoSansTC-Bold);
+  font-size: 1.2rem;
+  width: 150px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.2s all linear;
+}
+
+section.main .content .detail .links .link > div.text > a:hover {
+  transform: scale(0.95);
+}
+
+section.main#iCAP .content .detail .links .link > div.text > a {
+  width: 180px;
+}
+
+footer {
+  display: grid;
+  grid-template-columns: 45% 55%;
+  gap: 15px;
+}
+
+footer .left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+footer .left > div:first-child a {
+  width: 100%;
+  display: block;
+}
+
+footer .left > div:first-child a img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+footer .left div:nth-child(2) {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  gap: 10px;
+  width: 100%;
+}
+
+footer .left div:nth-child(2) a img {
+  width: 100%;
+  object-fit: cover;
+}
+
+footer .right {
+  border: 1px solid var(--font-color);
+  padding: 15px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+footer .right .title {
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: var(--font-color);
+  letter-spacing: 2px;
+}
+
+footer .right .phone,
+footer .right .calendar {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 1.15rem;
+  color: var(--font-color);
+}
+
+footer .right .phone img,
+footer .right .calendar img {
+  width: 50px;
+}
+
+section#Bottom {
+  padding: 10px 170px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  background-color: var(--light-color);
+  font-weight: 600;
+}
+
+@media (max-width: 1440.98px) {
+  section#Banner .title .zh {
+    font-size: 65px;
+  }
+  section.main .content .detail .title .zh {
+    font-size: 45px;
+  }
+  section.main .content .detail .links .link > div.text > a {
+    font-size: 1rem;
+    width: 100px;
+  }
+  section.main#iCAP .content .detail .links .link > div.text > a {
+    width: 150px;
+  }
+}
+
+@media (max-width: 1300.98px) {
+  section#Banner {
+    padding: 70px 80px;
+  }
+  section#Banner .title .zh {
+    font-size: 60px;
+  }
+  section.main,
+  footer {
+    padding: 50px 80px;
+  }
+  section#Bottom {
+    padding: 10px 80px;
+  }
+}
+
+@media (max-width: 1200.98px) {
+  section.main .content .detail .title .zh {
+    font-size: 40px;
+  }
+  section.main .content .detail .title .en a {
+    font-size: 30px;
+  }
+  footer .right .title {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 1060.98px) {
+  section#Banner {
+    padding: 70px 70px;
+  }
+  section.main,
+  footer {
+    padding: 40px 70px;
+  }
+  section#Bottom {
+    padding: 10px 70px;
+  }
+  section#Banner .title .zh {
+    font-size: 55px;
+  }
+  section#Banner .title .en {
+    font-size: 50px;
+  }
+  section.main .content .detail .links {
+    gap: 5px;
+  }
+  section.main .content .detail .title .zh {
+    font-size: 38px;
+  }
+  section.main .content .detail .title .en a {
+    font-size: 28px;
+  }
+  section.main .content .detail .links .link > div.text > a {
+    font-size: 0.9rem;
+    width: 100px;
+    font-weight: 500;
+  }
+  section.main#iCAP .content .detail .links .link > div.text > a {
+    width: 120px;
+  }
+  footer .right .title {
+    font-size: 1.2rem;
+  }
+  footer .right {
+    padding: 12px;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  section#Banner {
+    padding: 40px 45px;
+  }
+  section#Bottom {
+    padding: 10px 45px;
+  }
+  section.main,
+  footer {
+    padding: 40px 45px;
+  }
+  section#Banner .title .zh {
+    font-size: 45px;
+  }
+  section#Banner .title .en {
+    font-size: 42px;
+  }
+  section#Banner .image {
+    width: 175px;
+    height: 175px;
+  }
+  section.main .content .detail .links .link > div:first-child {
+    width: 90px;
+    height: 90px;
+  }
+  section.main .content .detail .title .zh {
+    font-size: 35px;
+  }
+  section.main .content .detail .title .en a {
+    font-size: 25px;
+  }
+  section.main .content .detail .links .link > div.text > a {
+    font-size: 0.85rem;
+    width: 90px;
+  }
+  section.main#iCAP .content .detail .links .link > div.text > a {
+    width: 110px;
+  }
+  footer .right {
+    padding: 15px;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 850.98px) {
+  section.main .content {
+    grid-template-columns: 100%;
+  }
+  section.main#iCAP .content .detail {
+    order: 2;
+  }
+  section.main .content .detail .links {
+    justify-content: start;
+    gap: 60px;
+  }
+  section.main .content .detail .title .zh {
+    font-size: 45px;
+  }
+  section.main .content .detail .title .en a {
+    font-size: 32px;
+  }
+  section.main .content .detail .links .link > div:first-child {
+    width: 100px;
+    height: 100px;
+  }
+  section.main .content .detail .links .link > div.text > a {
+    font-size: 1rem;
+    width: 150px;
+  }
+  section.main#iCAP .content .detail .links .link > div.text > a {
+    width: 170px;
+  }
+  footer {
+    grid-template-columns: 35% 65%;
+    gap: 10px;
+  }
+  footer .left div:nth-child(2) {
+    grid-template-columns: 100%;
+    gap: 0;
+  }
+}
+
+@media (max-width: 768.98px) {
+  section#Banner {
+    flex-direction: column;
+    gap: 20px;
+  }
+  section#Banner .title .zh {
+    font-size: 65px;
+  }
+  section#Banner .title .en {
+    font-size: 55px;
+  }
+  section#Banner .image {
+    width: 200px;
+    height: 200px;
+  }
+  section.main .content .detail .links {
+    justify-content: space-between;
+    gap: 8px;
+  }
+  section.main .content .detail .title {
+    text-align: center;
+  }
+  section.main .content .detail .title .zh {
+    font-size: 40px;
+  }
+  section.main .content .detail .title .en a {
+    font-size: 30px;
+  }
+  section.main .content .detail .links .link > div:first-child {
+    width: 100px;
+    height: 100px;
+  }
+  section.main .content .detail .links .link > div.text > a {
+    font-size: 0.98rem;
+    width: 150px;
+  }
+  section.main#iCAP .content .detail .links .link > div.text > a {
+    width: 160px;
+  }
+  footer {
+    grid-template-columns: 100%;
+    gap: 10px;
+  }
+  footer .left div:nth-child(2) {
+    grid-template-columns: 50% 50%;
+  }
+  footer .right .title {
+    text-align: center;
+  }
+}
+
+@media (max-width: 600.98px) {
+  section.main,
+  footer {
+    padding: 35px 20px;
+  }
+  section#Bottom {
+    padding: 10px 20px;
+    flex-direction: column;
+    align-items: start;
+  }
+  section.main .content .detail .title .zh {
+    font-size: 42px;
+  }
+  section.main .content .detail .title .en a {
+    font-size: 30px;
+  }
+  section.main .content .detail .links .link > div:first-child {
+    width: 90px;
+    height: 90px;
+  }
+  section.main .content .detail .links .link > div.text > a {
+    font-size: 0.95rem;
+    width: 120px;
+  }
+  section.main#iCAP .content .detail .links .link > div.text > a {
+    width: 150px;
+  }
+  footer .right .phone img,
+  footer .right .calendar img {
+    width: 40px;
+  }
+}
+
+@media (max-width: 576.98px) {
+  section#Banner .title .zh {
+    font-size: 50px;
+  }
+  section#Banner .title .en {
+    font-size: 45px;
+  }
+  section.main .content .detail .title .zh {
+    font-size: 35px;
+  }
+  section.main .content .detail .title .en a {
+    font-size: 25px;
+  }
+  section.main .content .detail .links .link {
+    width: calc(100% / 3);
+  }
+  section.main .content .detail .links .link > div:first-child {
+    max-width: 80px;
+    width: 100%;
+    aspect-ratio: 1/1;
+  }
+  section.main .content .detail .links .link > div.text > a {
+    font-size: 0.85rem;
+    width: 100%;
+  }
+  section.main#iCAP .content .detail .links .link > div.text > a {
+    width: 100%;
+  }
+}
+
+@media (max-width: 500.98px) {
+  section#Banner {
+    gap: 15px;
+  }
+  section#Banner .title {
+    gap: 10px;
+  }
+  section#Banner .title .zh {
+    font-size: 40px;
+  }
+  section#Banner .title .en {
+    font-size: 40px;
+  }
+  section#Banner .image {
+    width: 160px;
+    height: 160px;
+  }
 }
