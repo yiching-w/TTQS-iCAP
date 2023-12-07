@@ -184,6 +184,7 @@ section.main .content .detail .links {
   align-items: center;
   justify-content: space-between;
   margin-top: 30px;
+  gap: 5px;
 }
 
 section.main .content .detail .links .link {
@@ -208,11 +209,11 @@ section.main .content .detail .links .link > div.text > a {
   display: block;
   background-color: var(--main-color);
   margin-top: 10px;
-  padding: 10px 15px;
+  padding: 10px 12px;
   color: #fff;
   font-family: var(--NotoSansTC-Regular);
   font-weight: 600;
-  font-size: 1.2rem;
+  font-size: 1.02rem;
   width: 150px;
   text-align: center;
   cursor: pointer;
@@ -224,7 +225,7 @@ section.main .content .detail .links .link > div.text > a:hover {
 }
 
 section.main#iCAP .content .detail .links .link > div.text > a {
-  width: 180px;
+  width: 185px;
 }
 
 footer {
@@ -315,6 +316,10 @@ section#Bottom {
   }
   section.main#iCAP .content .detail .links .link > div.text > a {
     width: 150px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 
@@ -379,6 +384,7 @@ section#Bottom {
   }
   section.main#iCAP .content .detail .links .link > div.text > a {
     width: 120px;
+    height: 62px;
   }
   footer .right .title {
     font-size: 1.2rem;
@@ -426,6 +432,7 @@ section#Bottom {
   }
   section.main#iCAP .content .detail .links .link > div.text > a {
     width: 110px;
+    height: 60px;
   }
   footer .right {
     padding: 15px;
@@ -460,6 +467,7 @@ section#Bottom {
   }
   section.main#iCAP .content .detail .links .link > div.text > a {
     width: 170px;
+    height: auto;
   }
   footer {
     grid-template-columns: 35% 65%;
@@ -548,6 +556,7 @@ section#Bottom {
   }
   section.main#iCAP .content .detail .links .link > div.text > a {
     width: 150px;
+    height: 64px;
   }
   footer .right .phone img,
   footer .right .calendar img {
@@ -583,6 +592,13 @@ section#Bottom {
   }
   section.main#iCAP .content .detail .links .link > div.text > a {
     width: 100%;
+    height: auto;
+  }
+  footer .right .calendar {
+    flex-direction: column;
+  }
+  footer .right .calendar img {
+    width: 50px;
   }
 }
 
@@ -602,5 +618,8 @@ section#Bottom {
   section#Banner .image {
     width: 160px;
     height: 160px;
+  }
+  section.main#iCAP .content .detail .links .link > div.text > a {
+    height: 60px;
   }
 }
