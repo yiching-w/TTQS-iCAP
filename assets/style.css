@@ -590,6 +590,9 @@ section#Bottom {
     font-size: 0.85rem;
     width: 100%;
   }
+  section.main#iCAP .content .detail .links .link > div.text {
+    width: 100%;
+  }
   section.main#iCAP .content .detail .links .link > div.text > a {
     width: 100%;
     height: auto;
