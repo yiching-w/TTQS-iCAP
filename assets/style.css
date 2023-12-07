@@ -560,7 +560,8 @@ section#Bottom {
     font-size: 45px;
   }
   section.main .content .detail .title .zh {
-    font-size: 35px;
+    font-size: 32px;
+    letter-spacing: 0.5px;
   }
   section.main .content .detail .title .en a {
     font-size: 25px;
