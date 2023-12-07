@@ -594,8 +594,13 @@ section#Bottom {
     width: 100%;
     height: auto;
   }
+  footer .right .phone {
+    justify-content: center;
+    gap: 10px;
+  }
   footer .right .calendar {
     flex-direction: column;
+    gap: 0px;
   }
   footer .right .calendar img {
     width: 50px;
