@@ -231,7 +231,7 @@ section.main#iCAP .content .detail .links .link > div.text > a {
 footer {
   display: grid;
   grid-template-columns: 45% 55%;
-  gap: 15px;
+  gap: 20px;
 }
 
 footer .left {
