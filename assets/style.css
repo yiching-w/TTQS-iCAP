@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;400;500;700;900&display=swap");
+
 :root {
   --main-color: #49999f;
   --font-color: #43302a;
@@ -5,8 +7,7 @@
   --light-color: #f5feff;
   --gray: #e5e6e7;
   --tt-moons-font: "ttmoons-font", sans-serif;
-  --NotoSansTC-Bold: "NotoSansTC-Bold", sans-serif;
-  --NotoSansTC-Regular: "NotoSansTC-Regular", sans-serif;
+  --NotoSansTC-Regular: "Noto Sans TC", sans-serif;
 }
 
 @font-face {
@@ -58,7 +59,8 @@ section#Banner .title {
 section#Banner .title .zh {
   font-size: 75px;
   color: var(--font-color);
-  font-family: var(--NotoSansTC-Bold);
+  font-family: var(--NotoSansTC-Regular);
+  font-weight: 600;
   text-shadow: 1px 1px 1px #0005;
 }
 
@@ -208,7 +210,8 @@ section.main .content .detail .links .link > div.text > a {
   margin-top: 10px;
   padding: 10px 15px;
   color: #fff;
-  font-family: var(--NotoSansTC-Bold);
+  font-family: var(--NotoSansTC-Regular);
+  font-weight: 600;
   font-size: 1.2rem;
   width: 150px;
   text-align: center;
